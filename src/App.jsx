@@ -1,8 +1,10 @@
 import Table from "./Table";
 import { Data } from "./Data";
 import "./App.css";
+import { useState } from "react";
 
 const App = () => {
+  const [data, setData] = useState([]);
   return (
     <>
       <div className="container">
