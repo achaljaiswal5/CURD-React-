@@ -1,10 +1,10 @@
-const Table = () => {
+const Table = ({ data }) => {
   return (
     <table className="table  table-hover table-responsive ">
       <thead>
         <tr>
           <th scope="col">Sr.No</th>
-          <th scope="col">Id</th>
+          <th scope="col">ID</th>
           <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
           <th scope="col">Age</th>
@@ -12,21 +12,23 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>
-            <button type="button" className="btn btn-primary button-margin ">
-              Edit
-            </button>
-            <button type="button" className="btn btn-danger">
-              Delete
-            </button>
-          </td>
-        </tr>
+        {data.map((items, index) => (
+          <tr>
+            <th scope="row">{index + 1}</th>
+            <td>{index + 1}</td>
+            <td>{items.firstName}</td>
+            <td>{items.lastName}</td>
+            <td>{items.age}</td>
+            <td>
+              <button type="button" className="btn btn-primary button-margin ">
+                Edit
+              </button>
+              <button type="button" className="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );

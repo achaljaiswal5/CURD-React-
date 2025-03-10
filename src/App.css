@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.firstname {
+  margin-right: 8px;
+}
+
+.lastname {
+  margin-right: 8px;
+}
